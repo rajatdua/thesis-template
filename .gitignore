@@ -1,0 +1,16 @@
+.DS_Store
+**/auto/
+tags
+*~
+\#*
+*.blg
+*.bbl
+*.aux
+*.log
+*.lof
+*.lol
+*.lot
+*.out
+*.xml
+ClassicThesis.pdf
+
