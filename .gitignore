@@ -14,6 +14,7 @@ tags
 *.out
 *.toc
 *.xml
+*.numbers
 ClassicThesis.pdf
 ClassicThesis-blx.bib
 
