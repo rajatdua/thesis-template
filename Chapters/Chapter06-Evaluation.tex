@@ -71,8 +71,6 @@ tables, see the \LaTeX\ wiki books\footnote{\url{https://en.wikibooks.org/wiki/L
 \begin{table}
   \myfloatalign
   \pgfplotstabletypeset[
-  read comma as period,
-  col sep=semicolon,
   every head row/.style={
     before row=\toprule,
     after row=\midrule,
@@ -111,6 +109,24 @@ tables, see the \LaTeX\ wiki books\footnote{\url{https://en.wikibooks.org/wiki/L
 \end{table}
 
 
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis} [xlabel=$x$, ylabel=$\bar{y}$]
+      \addplot[
+      error bars,
+      y dir=both,
+      y explicit,
+      error bar style={red}
+      ] table[
+      x=x,
+      y=avgy,
+      y error=stddevp]{./data/example.csv};
+    \end{axis}
+  \end{tikzpicture}
+  \caption{A graph with error bars}
+  \label{fig:pretty-graph}
+\end{figure}
 
 
 %%% Local Variables:
