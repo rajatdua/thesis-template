@@ -59,29 +59,55 @@ web-based systems, D3.js\footnote{\url{http://d3jsp.org/}} is quite popular.
 
 If you output your data to comma or tab separated files, you can even
 generate your plots and tables directly in \LaTeX\ using
-\textsc{Pgfplots}\footnote{\url{https://sourceforge.net/projects/pgfplots/}}
-   (examples\footnote{\url{http://pgfplots.net/tikz/examples/all/}}) and
+\textsc{Pgfplots}\footnote{\url{http://pgfplots.sourceforge.net/}}
+   (further examples\footnote{\url{http://pgfplots.net/tikz/examples/all/}}) and
 \textsc{PgfplotsTable}\footnote{\url{http://pgfplots.sourceforge.net/pgfplotstable.pdf}}.
 Doing this can quickly save you time, as especially \LaTeX\ tables, while
-pretty, are tedious and error prone to edit. 
+pretty, are tedious and error prone to edit. See
+\autoref{tab:pretty-table} for an auto-generated example. For more help on
+tables, see the \LaTeX\ wiki books\footnote{\url{https://en.wikibooks.org/wiki/LaTeX/Tables}}.
 
 
 \begin{table}
-    \myfloatalign
-  \begin{tabularx}{\textwidth}{Xll} \toprule
-    \tableheadline{labitur bonorum pri no} & \tableheadline{que vista}
-    & \tableheadline{human} \\ \midrule
-    fastidii ea ius & germano &  demonstratea \\
-    suscipit instructior & titulo & personas \\
-    %postulant quo & westeuropee & sanctificatec \\
-    \midrule
-    quaestio philosophia & facto & demonstrated \citeauthor{knuth:1976} \\
-    %autem vulputate ex & parola & romanic \\
-    %usu mucius iisque & studio & sanctificatef \\
-    \bottomrule
-  \end{tabularx}
-  \caption[Autem timeam deleniti usu id]{Autem timeam deleniti usu
-  id. \citeauthor{knuth:1976}}  \label{tab:pretty-table}
+  \myfloatalign
+  \pgfplotstabletypeset[
+  read comma as period,
+  col sep=semicolon,
+  every head row/.style={
+    before row=\toprule,
+    after row=\midrule,
+  },
+  every even row/.style={
+    before row={\rowcolor[gray]{0.95}}},
+  every last row/.style={
+    after row=\bottomrule
+  },
+  columns={x, avgy, stddevpp},
+  columns/x/.style={
+    column name=x,
+    dec sep align,
+    fixed,
+    fixed zerofill,
+    precision=2
+  },
+  columns/avgy/.style={
+    column name=$\bar{y}$,
+    dec sep align,
+    fixed,
+    fixed zerofill,
+    precision=2
+  },
+  columns/stddevpp/.style={
+    column name=$\sigma\%$,
+    dec sep align,
+    fixed,
+    fixed zerofill,
+    precision=1
+  },
+  ]{./data/example.csv}
+  % \tableheadline{labitur bonorum pri no} & \tableheadline{que vista}
+  % & \tableheadline{human} \\ \midrule
+  \caption{An auto-generated table} \label{tab:pretty-table}
 \end{table}
 
 
