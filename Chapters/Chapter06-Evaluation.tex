@@ -38,7 +38,7 @@ text.
 \begin{figure}
   \myfloatalign
   \begin{tikzpicture}
-    \begin{axis} [xlabel=$x$, ylabel=$\bar{y}$]
+    \begin{axis} [xlabel=time (s), ylabel=value]
       \addplot[
       sharp plot,
       error bars,
@@ -51,7 +51,7 @@ text.
       y error=stddevp]{./data/example.csv};
     \end{axis}
   \end{tikzpicture}
-  \caption{A graph with error bars}
+  \caption[A graph with error bars]{Generating figures directly in \LaTeX\ is possible, and they can be very consistent stylewise with the rest of the document.}
   \label{fig:pretty-graph}
 \end{figure}
 
@@ -62,7 +62,7 @@ text.
   \pgfplotstabletypeset[
   every head row/.style={
     before row=\toprule,
-    after row=\midrule,
+    after row=\midrule
   },
   every even row/.style={
     before row={\rowcolor[gray]{0.95}}},
@@ -71,14 +71,14 @@ text.
   },
   columns={x, avgy, stddevpp},
   columns/x/.style={
-    column name=x,
+    column name=\textsc{Time},
     dec sep align,
     fixed,
     fixed zerofill,
     precision=2
   },
   columns/avgy/.style={
-    column name=$\bar{y}$,
+    column name=\textsc{Value},
     dec sep align,
     fixed,
     fixed zerofill,
@@ -94,7 +94,9 @@ text.
   ]{./data/example.csv}
   % \tableheadline{labitur bonorum pri no} & \tableheadline{que vista}
   % & \tableheadline{human} \\ \midrule
-  \caption{An auto-generated table} \label{tab:pretty-table}
+  \caption[An auto-generated table]{This table has been generated from a
+    .csv file, which sometimes can be very handy and a great timesaver. Note, how numbers have been aligned properly.}
+  \label{tab:pretty-table}
 \end{table}
 
 
