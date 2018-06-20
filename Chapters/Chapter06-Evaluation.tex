@@ -60,7 +60,7 @@ text.
 \begin{table}
   \myfloatalign
   \pgfplotstabletypeset[
-  every head row/.style={
+  every head row/.style={%Define the lines and alternating row backgrounds
     before row=\toprule,
     after row=\midrule
   },
@@ -69,7 +69,7 @@ text.
   every last row/.style={
     after row=\bottomrule
   },
-  columns={x, avgy, stddevpp},
+  columns={x, avgy, stddevpp},%Style the chosen columns and specify their alignment etc
   columns/x/.style={
     column name=\textsc{time},
     dec sep align,
