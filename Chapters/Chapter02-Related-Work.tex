@@ -87,19 +87,21 @@ to remind the reader of the results, as well as laying the foundation for
 \autoref{cha:analysis}.
 
 
-\begin{table}[h]
+\begin{landscape}
+  \begin{table}[h]
     \myfloatalign
-  \begin{tabularx}{\textwidth}{Xccccc} \toprule
-    \tableheadline{System} & \tableheadline{Aspect} & \tableheadline{Aspect} & \tableheadline{Aspect} & \tableheadline{Aspect} & \tableheadline{Aspect} \\ \midrule
-    Foo & ++ & +  & -- & +  & --\\
-    Bar & +  & ++ & -- & --  & +\\
-    Baz & +  & --  & -- & ++ & ++\\
-   Quux & --  & +  & + & +  & ++\\
-    \bottomrule
-  \end{tabularx}
-  \caption[Summary of systems]{The systems and papers described in \autoref{cha:related-work}. The systems have been rated from low to high along the chosen aspects. Note, how this description is very much longer than what appears in the List of Tables. Using both a short and long description is a good idea---it leaves a tidy index and provides rich information where it is needed.}
-  \label{tab:relatedwork-summary}
-\end{table}
+    \begin{tabularx}{\textwidth}{Xccccc} \toprule
+      \tableheadline{System} & \tableheadline{Aspect} & \tableheadline{Aspect} & \tableheadline{Aspect} & \tableheadline{Aspect} & \tableheadline{Aspect} \\ \midrule
+      Foo  & ++ & +  & -- & +  & --\\
+      Bar  & +  & ++ & -- & --  & +\\
+      Baz  & +  & --  & -- & ++ & ++\\
+      Quux & --  & +  & + & +  & ++\\
+      \bottomrule
+    \end{tabularx}
+    \caption[Summary of systems]{The systems and papers described in \autoref{cha:related-work}. The systems have been rated from low to high along the chosen aspects. Note, how this description is very much longer than what appears in the List of Tables. Using both a short and long description is a good idea---it leaves a tidy index and provides rich information where it is needed. This table is rotated (see the source to see how)---not because it is strictly needed, but to show how it might be done with even wider figures.}
+    \label{tab:relatedwork-summary}
+  \end{table}
+\end{landscape}
 
 
 %%% Local Variables:
