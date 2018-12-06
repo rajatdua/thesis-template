@@ -42,6 +42,26 @@ dimensions described above invariantly will reflect your own focus,
 that should be the extend of which your own work and plans influence
 this chapter.  Your own judgement comes in the next chapter.
 
+  \begin{sidewaysfigure}
+  \centering
+
+  \subfloat[Google Scholar.]
+  {\label{fig:bibtex-1}\includegraphics[width=.33\linewidth]{gfx/bibtex_1}}
+  \subfloat[Press `"'.]
+  {\label{fig:bibtex-2}\includegraphics[width=.33\linewidth]{gfx/bibtex_2}}
+  \subfloat[Press `BibTeX'.]
+  {\label{fig:bibtex-3}\includegraphics[width=.33\linewidth]{gfx/bibtex_3}}
+  
+  \subfloat[Copy the reference.]
+  {\label{fig:bibtex-4}\includegraphics[width=.33\linewidth]{gfx/bibtex_4}}
+  \subfloat[Follow the ACM link and press BibTeX.]
+  {\label{fig:bibtex-5}\includegraphics[width=.33\linewidth]{gfx/bibtex_5}}
+  \subfloat[Copy the much better reference.]
+  {\label{fig:bibtex-6}\includegraphics[width=.33\linewidth]{gfx/bibtex_6}}
+
+  \caption[Two different ways to get good \mBibTeX\ references]{Two different ways to get good \mBibTeX\ references. The ACM method is recommended as it provides a much higher quality reference, whereas the Google Scholar reference is merely scraped.}\label{fig:bibtex}
+\end{sidewaysfigure}
+
 
 \section{A small note on references}
 \label{sec:small-note-refer}
@@ -49,20 +69,22 @@ this chapter.  Your own judgement comes in the next chapter.
 It is essential for any scientific work to cite its sources. This can be done
 relatively painlessly using \mBibTeX\ as outlined on
 \autopageref{sec:handl-bibl}. It is important that you include all necessary
-information in the bibliography for others to correctly identify and locate
-the referenced work. If you cite one work, it should be done thus
-\cite{Kristensen2010:MP2P2010}, if you cite a specific page in a work, it
-should be done thus \cite[p. 410]{Chawathe2003:2003}, and if you cite multiple
-works, it should be done thus
-\cite{knuth:1976,knuth:1974,Kristensen2010:MP2P2010,Mittelbach2004:TLC2004}.
-I generally reserve the bibliography for works that have been properly
-published and/or peer reviewed. References to Web pages are best handled
-through footnotes\footnote{\url{https://www.tug.org/applications/pdftex/}
-  accessed 2018/6/27.} (or marginalia, if they are very
-short\marginpar{\scriptsize\url{http://lyx.org/}}), though some things, such
-as RFCs and other standard documents, belong in the bibliography proper. If
-you use a figure from another work, you \emph{must} give attribution---otherwise
-it counts as plagiarism, which is a serious offence.
+information in the bibliography for others to correctly identify and locate the
+referenced work, and the easiest way to do that is to copy the \mBibTeX\
+reference straight from ACM, as seen in \autoref{fig:bibtex}.  Other publishers usually also have \mBibTeX\ references available. If you cite one
+work, it should be done thus \cite{Kristensen2010:MP2P2010}, if you cite a
+specific page in a work, it should be done thus
+\cite[p. 410]{Chawathe2003:2003}, and if you cite multiple works, it should be
+done thus
+\cite{knuth:1976,knuth:1974,Kristensen2010:MP2P2010,Mittelbach2004:TLC2004}.  I
+generally reserve the bibliography for works that have been properly published
+and/or peer reviewed. References to Web pages are best handled through
+footnotes\footnote{\url{https://www.tug.org/applications/pdftex/} accessed
+  2018/6/27.} (or marginalia, if they are very
+short\marginpar{\scriptsize\url{http://lyx.org/}}), though some things, such as
+RFCs and other standard documents, belong in the bibliography proper. If you use
+a figure from another work, you \emph{must} give attribution---otherwise it counts
+as plagiarism, which is a serious offence.
 
 
 \section{Frameworks and Technologies}
@@ -90,27 +112,24 @@ to remind the reader of the results, as well as laying the foundation for
 \begin{landscape}
   \begin{table}[h]
     \myfloatalign
-  \begin{minipage}{.5\linewidth}
-    \renewcommand\thefootnote{\thempfootnote}
-    \begin{tabularx}{\textwidth}{Xccccc} \toprule
-      \tableheadline{System} & \tableheadline{Aspect} & \tableheadline{Aspect} & \tableheadline{Aspect} & \tableheadline{Aspect} & \tableheadline{Aspect} \\ \midrule
-      Foo  & Y    & (Y)  & N   & (Y) & N/A\footnote{Not Applicable}\\
-      Bar  & (Y)  & Y    & (N) & N   & (Y)\footnote{Only for positive integers, and not on Thursdays}\\
-      Baz  & (Y)  & N    & N/A & Y   & Y\\
-      Quux & N    & (Y)  & (Y) & (Y) & Y\\
-      \bottomrule
-    \end{tabularx}
-    \caption[Summary of systems]{The systems and papers described in \autoref{cha:related-work}. The systems have been rated along the chosen aspects. Note, how this description is very much longer than what appears in the List of Tables. Using both a short and long description is a good idea---it leaves a tidy index and provides rich information where it is needed. This table is rotated (see the source to see how)---not because it is strictly needed, but to show how it might be done with wider figures.}
-    \label{tab:relatedwork-summary}
-\end{minipage}
+    \begin{minipage}{.5\linewidth}
+      \renewcommand\thefootnote{\thempfootnote}
+      \begin{tabularx}{\textwidth}{Xccccc} \toprule
+        \tableheadline{System} & \tableheadline{Aspect} & \tableheadline{Aspect} & \tableheadline{Aspect} & \tableheadline{Aspect} & \tableheadline{Aspect} \\ \midrule
+        Foo  & Y    & (Y)  & N   & (Y) & N/A\footnote{Not Applicable}\\
+        Bar  & (Y)  & Y    & (N) & N   & (Y)\footnote{Only for positive integers, and not on Thursdays}\\
+        Baz  & (Y)  & N    & N/A & Y   & Y\\
+        Quux & N    & (Y)  & (Y) & (Y) & Y\\
+        \bottomrule
+      \end{tabularx}
+      \caption[Summary of systems]{The systems and papers described in \autoref{cha:related-work}. The systems have been rated along the chosen aspects. Note, how this description is very much longer than what appears in the List of Tables. Using both a short and long description is a good idea---it leaves a tidy index and provides rich information where it is needed. This table is rotated (see the source to see how)---not because it is strictly needed, but to show how it might be done with wider figures.}
+      \label{tab:relatedwork-summary}
+    \end{minipage}
   \end{table}
 \end{landscape}
+
 
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../ClassicThesis"
-%%% ispell-dictionary: "british" ***
-%%% mode:flyspell ***
-%%% mode:auto-fill ***
-%%% fill-column: 78 ***
 %%% End:
