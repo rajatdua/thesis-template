@@ -63,16 +63,18 @@ text.
 \begin{table}
   \myfloatalign
   \pgfplotstabletypeset[
-  every head row/.style={%Define the lines and alternating row backgrounds
+  every head row/.style={%Define the top and mid lines
     before row=\toprule,
     after row=\midrule
   },
-  every even row/.style={
-    before row={\rowcolor[gray]{0.95}}},
-  every last row/.style={
+  every last row/.style={%Define the bottom line
     after row=\bottomrule
   },
-  columns={x, avgy, stddevpp},%Style the chosen columns and specify their alignment etc
+%  every even row/.style={ %Define alternating row colouring
+%    before row={\rowcolor[gray]{0.95}}
+%  },
+  columns={x, avgy, stddevpp %Style the chosen columns and specify their alignment etc
+  },
   columns/x/.style={
     column name=\textsc{time},
     dec sep align,
@@ -98,7 +100,7 @@ text.
   % \tableheadline{labitur bonorum pri no} & \tableheadline{que vista}
   % & \tableheadline{human} \\ \midrule
   \caption[An auto-generated table]{This table has been generated from a
-    .csv file, which sometimes can be very handy and a great timesaver. Note, how numbers have been normalised and aligned properly.}
+    \texttt{.csv} file, which sometimes can be very handy and a great timesaver. Note, how numbers have been normalised and aligned properly.}
   \label{tab:pretty-table}
 \end{table}
 
