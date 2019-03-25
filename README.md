@@ -2,7 +2,7 @@
 ### An Homage to The Elements of Typographic Style ###
 Copyright (C) 2015 André Miede http://www.miede.de
 
-#André Miede README:#
+## André Miede README: ##
 
 Please see the file ClassicThesis.pdf for more information.
 Your comments are highly appreciated.
