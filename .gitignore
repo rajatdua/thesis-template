@@ -7,6 +7,9 @@ tags
 *.blg
 *.bbl
 *.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
 *.log
 *.lof
 *.lol
