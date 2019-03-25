@@ -20,4 +20,4 @@ tags
 *.numbers
 ClassicThesis.pdf
 ClassicThesis-blx.bib
-
+web/**
