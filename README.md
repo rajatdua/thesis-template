@@ -1,8 +1,8 @@
-A Classic Thesis Style v4.2
-An Homage to The Elements of Typographic Style
+#A Classic Thesis Style v4.2#
+##An Homage to The Elements of Typographic Style##
 Copyright (C) 2015 André Miede http://www.miede.de
 
-André Miede README:
+#André Miede README:#
 
 Please see the file ClassicThesis.pdf for more information.
 Your comments are highly appreciated.
@@ -15,16 +15,16 @@ http://postcards.miede.de
 ---------------------------------------------------------------------
 Copyright (C) 2019 Niels Olof Bouvin bouvin@cs.au.dk
 
-*Master’s Thesis Template for Experimental Computer Science*
+#Master’s Thesis Template for Experimental Computer Science#
 
-**Writing a thesis**
+##Writing a thesis##
 
 The following is a template based on the typographical work by Robert Bringhurst's seminal The Elements of Typographic Style in general, and on the LATEX package classicthesis by André Miede specifically, with my own modifications as well as my own content guide on how to write and structure a CS Master's Thesis.
 
 
 
 
-License:
+##License:##
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or
