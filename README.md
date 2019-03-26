@@ -15,7 +15,7 @@ http://postcards.miede.de
 ---------------------------------------------------------------------
 Copyright (C) 2019 Niels Olof Bouvin bouvin@cs.au.dk
 
-## Master’s Thesis Template for Experimental Computer Science ##
+## [Master’s Thesis Template for Experimental Computer Science](https://users-cs.au.dk/bouvin/thesis/) ##
 
 ### Writing a thesis ###
 
