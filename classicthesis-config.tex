@@ -16,6 +16,7 @@
 % äöüßáéçèê∂åëæƒÏ€ then change the encoding setting in your editor, not the line below. If your editor
 % does not support utf8 use another editor!
 % ****************************************************************************************************
+\PassOptionsToPackage{usenames,dvipsnames}{xcolor}%needed because several packages include xcolor
 \PassOptionsToPackage{utf8}{inputenc}
 \usepackage{inputenc}
         
@@ -42,25 +43,33 @@
 \usepackage{pdflscape} %used to rotate pages with wide tables
 \usepackage{rotating} %used to rotate wide figures
 \usepackage{siunitx} %used for nice number formatting
+\usepackage{pgf} % needed for arrays among other things
 % ****************************************************************************************************
 % 2. Personal data and user ad-hoc commands
 % ****************************************************************************************************
-\newcommand{\myTitle}{Experimental CS Thesis Title\xspace}
-\newcommand{\mySubtitle}{A Guide for Content \& Style\xspace}
-\newcommand{\myDegree}{Master's Thesis\xspace}
-\newcommand{\myName}{Put Student Name Here\xspace}
-\newcommand{\myStudentId}{20051234\xspace}
-\newcommand{\myNameToo}{Put Other Student Name Here\xspace}
-\newcommand{\myStudentIdToo}{20051235\xspace}
-\newcommand{\myProf}{Niels Olof Bouvin\xspace}
-\newcommand{\myOtherProf}{Put name here\xspace}
-\newcommand{\mySupervisor}{Put name here\xspace}
-\newcommand{\myFaculty}{Science \& Technology\xspace}
-\newcommand{\myDepartment}{Department of Computer Science\xspace}
-\newcommand{\myUni}{Aarhus University\xspace}
-\newcommand{\myLocation}{Aarhus\xspace}
-\newcommand{\myTime}{\monthname\ \the\year\xspace}
-\newcommand{\myVersion}{\xspace}
+
+\def\authors{
+  {Student No 1/Student ID 1},
+  {Student No 2/Student ID 2},
+  {Student No 3/Student ID 3},
+  {Student No 4/Student ID 4}}
+\def\myTitle{Experimental CS Thesis Title\xspace}
+\def\mySubtitle{A Guide for Content \& Style\xspace}
+\def\myDegree{Master's Thesis\xspace}
+\def\myShortNames{Student 1, 2, 3 \& 4\xspace}
+\def\myGroup{My Group}
+%\newcommand{\myStudentId}{20051234\xspace}
+%\newcommand{\myNameToo}{Put Other Student Name Here\xspace}
+%\newcommand{\myStudentIdToo}{20051235\xspace}
+\def\myProf{Niels Olof Bouvin\xspace}
+\def\myOtherProf{Put name here\xspace}
+\def\mySupervisor{Put name here\xspace}
+\def\myFaculty{Faculty of Natural Sciences\xspace}
+\def\myDepartment{Department of Computer Science\xspace}
+\def\myUni{Aarhus University\xspace}
+\def\myLocation{Aarhus\xspace}
+\def\myTime{\monthname\ \the\year\xspace}
+\def\myVersion{\xspace}
 
 
 % ********************************************************************
@@ -86,7 +95,8 @@
 \usepackage{microtype}
 \usepackage{csquotes}
 \usepackage{ragged2e}
-\usepackage[dvipsnames]{xcolor}
+% \usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xcolor}
 \usepackage{pgf-umlsd}
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
@@ -217,7 +227,7 @@
     urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, %pagecolor=RoyalBlue,%
     %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
     pdftitle={\myTitle},%
-    pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},%
+    pdfauthor={\textcopyright\ \myShortNames, \myUni, \myFaculty},%
     pdfsubject={},%
     pdfkeywords={},%
     pdfcreator={pdfLaTeX},%
