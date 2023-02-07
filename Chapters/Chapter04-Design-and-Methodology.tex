@@ -45,12 +45,25 @@ which can be created without any external applications.  These diagrams can
 later be referred to, or modified in the next chapter, as there may well be
 some differences between your design and your implementation.
 
+
+\begin{figure}
+  \centering
+  \includegraphics[width=.5\linewidth]{gfx/state_machine_profibus.pdf}
+  \caption{Profibus states and transitions (\cite{Overgaard2022:2022} used with permission)}
+  \label{fig:profibus}
+\end{figure}
+
 Indeed, a luxury of this chapter is that the design may well go further than
 solely the confirmation or refutation of the hypotheses.  If you are
 building a system, this is where you show that you know how to design one,
 even if you will actually not be implementing all of it.  If you had
 sufficient time and resources, \emph{this} is how you would make your
 system.
+
+If you have a protocol, or a system that can alternate between several
+states in a well-defined manner, a state machine is a very concise way to
+communicate this---consider \autoref{fig:profibus} and how much text that
+would have required to elucidate.
 
 However, before we come to that, it is necessary to investigate whether the
 required hypotheses are valid. If they are not, the design must be
@@ -114,7 +127,7 @@ implementation, and subsequent evaluation.
        \begin{call}{p1}{addIceCandidate()}{p1}{}
         \end{call}
     \end{sequencediagram}
-    \caption{A sequence diagram can communinate the interaction between components efficiently (adapted from \cite{Stephansen2017:2017})}
+    \caption{A sequence diagram can communinate the interaction between components efficiently (adapted from \cite{Stephansen2017:2017} with permission)}
     \label{fig:WebRTCSignalProcess}
 \end{figure}
   
