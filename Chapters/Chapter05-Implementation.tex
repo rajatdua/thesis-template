@@ -1,5 +1,8 @@
 \chapter{Implementation}
 \label{cha:implementation}
+\epigraph{``The rule is, jam to-morrow and jam yesterday—but never jam to-day.''}{\textit{Through the Looking-Glass}\\\textsc{Lewis Carroll}}
+
+
 
 Whereas the previous chapter concerned itself with the overall plan in the
 abstract, this is where the actual experiment in the form of an
@@ -34,13 +37,39 @@ is therefore important to clearly communicate how your system works and how
 it was built, so that the reader may have confidence in your evaluation and
 conclusions.
 
+%\begin{lstlisting}{float=b,language=Pascal,frame=tb,caption={A floating example (\texttt{listings} manual)},label=lst:useless}
+
+
+\begin{lstlisting}[float, language=C, caption=A small C program, label=lst:smallcprogram]
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+  FILE *fp;
+  
+  if (argc != 2) {
+    fprintf(stderr, "Usage: %s <file>\n", argv[0]);
+    exit(EXIT_FAILURE);
+  }
+  
+  fp = fopen(argv[1], "r");
+  if (fp == NULL) {
+    perror(argv[1]);
+    exit(EXIT_FAILURE);
+  }
+  
+  /* Other code omitted */
+  
+  fclose(fp);
+  exit(EXIT_SUCCESS);
+}
+\end{lstlisting}
 
 
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../ClassicThesis"
 %%% ispell-dictionary: "british" ***
-%%% mode:flyspell ***
-%%% mode:auto-fill ***
 %%% fill-column: 76 ***
 %%% End:

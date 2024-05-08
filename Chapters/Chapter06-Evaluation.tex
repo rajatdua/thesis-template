@@ -1,5 +1,10 @@
 \chapter{Evaluation}
 \label{cha:evaluation}
+\epigraph{``I daresay you haven't had much practice,'' said the
+Queen. ``When I was your age, I always did it for half-an-hour a
+day. Why, sometimes I've believed as many as six impossible things
+before breakfast.''}{\textit{Through the Looking-Glass}\\\textsc{Lewis Carroll}}
+
 
 Having built the equivalent of a experimental setup, it is time to use the
 implementation to test the hypotheses.
@@ -41,7 +46,7 @@ text.
 \begin{figure}
   \myfloatalign
   \begin{tikzpicture}
-    \begin{axis} [xlabel=time (s), ylabel=value]
+     \begin{axis} [xlabel=time (s), ylabel=value]
       \addplot[
       sharp plot,
       error bars,
@@ -100,7 +105,7 @@ text.
   % \tableheadline{labitur bonorum pri no} & \tableheadline{que vista}
   % & \tableheadline{human} \\ \midrule
   \caption[An auto-generated table]{This table has been generated from a
-    \texttt{.csv} file, which sometimes can be very handy and a great timesaver. Note, how numbers have been normalised and aligned properly.}
+    \texttt{.csv} file, which sometimes can be very handy and a great timesaver. Note, how numbers have been automatically normalised and aligned properly.}
   \label{tab:pretty-table}
 \end{table}
 
@@ -141,24 +146,24 @@ paper copy might well tell a different story.
 
 If you output your data to comma or tab separated files, you can even
 generate your plots and tables directly in \LaTeX\ using
-\textsc{Pgfplots}\footnote{\url{http://pgfplots.sourceforge.net/} accessed
-  2018/6/27} (Share\LaTeX\ has a gentle
-introduction\footnote{\url{https://www.sharelatex.com/learn/Pgfplots_package}
+\texttt{Pgfplots}\footnote{\url{http://pgfplots.sourceforge.net/} accessed
+  2018/6/27} (Overleaf has a gentle
+introduction\footnote{\url{https://www.overleaf.com/learn/latex/Pgfplots_package}
   accessed 2018/6/17}): \autoref{fig:pretty-graph} was generated using
-\textsc{Pgfplots} and \autoref{tab:pretty-table} using
-\textsc{PgfplotsTable}\footnote{\url{http://pgfplots.sourceforge.net/pgfplotstable.pdf}
+\texttt{Pgfplots} and \autoref{tab:pretty-table} using
+\texttt{PgfplotsTable}\footnote{\url{http://pgfplots.sourceforge.net/pgfplotstable.pdf}
   accessed 2018/6/27.}.  Doing this can quickly save you time, as especially
 \LaTeX\ tables are tedious and error prone to edit. For more help on tables,
 see the \LaTeX\ Wiki
 books\footnote{\url{https://en.wikibooks.org/wiki/LaTeX/Tables} accessed
   2018/6/27.}.
 
+\texttt{Booktabs}~\cite{fear2005publication}\footnote{\url{http://mirror.ctan.org/macros/latex/contrib/booktabs/} accessed 2024/5/6.} is a package by \citeauthor{fear2005publication} for creating publication ready tables, and it is used throughout this document.
+
 
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../ClassicThesis"
 %%% ispell-dictionary: "british" ***
-%%% mode:flyspell ***
-%%% mode:auto-fill ***
 %%% fill-column: 76 ***
 %%% End:

@@ -11,6 +11,8 @@ Once it has been properly setup and configured, it is unparalleled in consistent
 While excellent online editors exist, notably Overleaf\footnote{\url{https://www.overleaf.com/} accessed 2019/3/27.}, I would hesitate to recommend their use for a whole thesis, as I find that dedicated text editors, such as GNU Emacs, Vim, Sublime Text, or Visual Studio Code are vastly superior.
 They are mature text editing platforms, and provide excellent support, not only for \LaTeX\ itself, but also for versioning, and thus for collaboration.
 
+If you cannot resist the convenience of Overleaf, I would recommend opting for a paid account during the months you are writing your thesis. There are a number of benefits, including git\footnote{This alone is worth the price of admission.} and Dropbox integration, and it is not very expensive.
+
 If you prefer a more visual tool, there are specialised \LaTeX\ editors, such as  \mLyX\footnote{\url{https://www.lyx.org/} accessed 2018/6/27.}, which is available for Linux, Windows, and macOS; \TeX nicCenter\footnote{\url{http://www.texniccenter.org/} accessed 2018/6/27.} for Windows, which this very document comes prepared for; and \TeX studio\footnote{\url{http://texstudio.sourceforge.net} accessed 2018/7/3.}, available for Linux, Windows, and macOS.
 
 My own setup has for decades consisted of GNU Emacs with the packages AUC\TeX\footnote{\url{https://www.gnu.org/software/auctex/} accessed 2018/6/27.} combined with Ref\TeX\footnote{\url{https://www.gnu.org/software/auctex/reftex.html} accessed 2018/6/27.} (both easily installed from inside Emacs: Options $\rightarrow$ Manage Emacs Packages) and I have yet to see anything getting close to the power of that combination.
@@ -32,8 +34,28 @@ The best place to find references in general is Google Scholar\footnote{\url{htt
 As you create your entries, you should take care to ensure that all fields required for others to find the referenced work are filled out correctly.
 See \autoref{sec:small-note-refer} for a more detailed discussion on this.
 
+If you find an interesting paper, it is wise to download it for future reference. The above mentioned Bibdesk can help with filing the many papers you might accrue. 
+
 While Google Scholar is fine for finding references, you will occasionally need to retrieve papers from ACM, IEEE, or some other paywalled site.
 The AU Library has accounts with these and many other publishers, so if you access the sites from within AU (or through the AU VPN), you can usually download without restriction.
+
+\section*{Using Generative AI in Your Thesis}
+\label{sec:using-generative-ai}
+
+It is now permitted to use GenAI at AU\footnote{\url{https://studerende.au.dk/en/view/artikel/nye-regler-nu-maa-du-bruge-ai-til-dit-speciale-eller-bachelorprojekt}}, but you must treat this kind of tool with caution as you would any outside help. \emph{You} are, after all, the one writing the thesis, \emph{not} some machine!
+
+\paragraph{Good uses for GenAI} Generative AI, \eg ChatGPT, can be excellent tools for learning about new topics or summarising some area of interest. As such, it can be a powerful supplement to ordinary search engine use and literature perusal. You should however always keep in mind that GenAI is prone to hallucinations, and thus verify any claims made. Large Language Models may seem confident in their output, but they are just algorithms generating texts probabilistic based on a training corpus, and thus produce texts  \emph{likely} rather than \emph{true}.
+
+Generative AI can be very useful, when it comes to correcting grammar, or cleaning up text. Ideally, you should use GenAI as a tutor providing critique---using its suggestions to improve your own writing, so that you, over time, do not require its assistance. If you use generative AI to alter and improve your text, you must state so in the introduction. 
+
+Incidentally, ChatGPT can also be a great help, when it comes to figuring out how to do something in \LaTeX---here, the machine's ability to ingest vast amounts of documentation, and answer questions based on it becomes \emph{very} useful!
+
+\paragraph{Questionable uses for GenAI} More problematic is using such tools to generate actual thesis content from prompts. If you do that, you \emph{must} indicate that this is machine generated text and provide the prompt used. This is just like providing a reference to a quotation from a scientific publication: including material without attribution is \emph{plagiarism}, \ie exam fraud.
+
+
+\begin{displayquote}[ChatGPT V4, 2024-05-08: ``Write a short, succinct paragraph on why it is better to write your own text rather than relying on machine generated ditto in the style of a scientific publication'']\small
+  While machine-generated text can efficiently produce content, relying solely on such output may compromise the integrity and authenticity of the work. Crafting original text allows for the infusion of personal insights, nuances, and creativity, tailored to the specific context and audience. This process fosters deeper engagement and understanding, facilitating the conveyance of complex ideas with clarity and precision. Moreover, writing one's own text encourages critical thinking, problem-solving, and mastery of the subject matter, nurturing intellectual growth and fostering a sense of ownership and pride in the work. Therefore, while machine-generated text may serve as a useful tool for generating ideas or assisting in drafting, the act of writing one's own text remains invaluable for cultivating expertise, expression, and scholarly contribution.
+\end{displayquote}
 
 \section*{Creating Figures}
 \label{sec:creating-figures}
@@ -49,16 +71,20 @@ alike.
 If you prefer your reference material in hard copy, the two seminal works are \citetitle{Lamport1994:LADPSUGARM1994}~\cite{Lamport1994:LADPSUGARM1994} by \citeauthor{Lamport1994:LADPSUGARM1994}, the creator of \LaTeX,
 and \citetitle{Mittelbach2004:TLC2004}~\cite{Mittelbach2004:TLC2004} by \citeauthor{Mittelbach2004:TLC2004}.
 
+\section*{Folders and Files: the organisation of this document}
+\label{sec:fold-files:-organ}
+See \autoref{sec:organization} for an explanation of the folder and file structure of this document.
+
+
 \section*{This Document is Duplex}
 \label{sec:print-this-docum}
 
-It may seem obvious, but just to be clear: this document style is intended to be printed duplex.
+It may seem obvious, but just to be clear: this document style is intended to be printed duplex. You should \emph{not} start trying to delete seemingly ``empty'' pages!
 
 
 %%% Local Variables:
 %%% mode: latex
 %%% eval: (visual-line-mode t)
 %%% ispell-dictionary: "british" ***
-%%% mode: flyspell
 %%% TeX-master: "../ClassicThesis"
 %%% End:

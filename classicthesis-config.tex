@@ -24,9 +24,26 @@
 % 1. Configure classicthesis for your needs here, e.g., remove "drafting" below 
 % in order to deactivate the time-stamp on the pages
 % ****************************************************************************************************
-\PassOptionsToPackage{eulerchapternumbers,listings,%drafting,%
-					 pdfspacing,%floatperchapter,%linedheaders,%
-					 subfig,beramono,eulermath,parts}{classicthesis}                                        
+
+% \PassOptionsToPackage{eulerchapternumbers,listings,%drafting,%
+%					 pdfspacing,%floatperchapter,%linedheaders,%
+%					 subfig,beramono,eulermath,parts}{arsclassica}
+
+\PassOptionsToPackage{
+  drafting=false,    % print version information on the bottom of the pages
+  tocaligned=false, % the left column of the toc will be aligned (no indentation)
+  dottedtoc=false,  % page numbers in ToC flushed right
+  eulerchapternumbers=true, % use AMS Euler for chapter font (otherwise Palatino)
+  linedheaders=false,       % chaper headers will have line above and beneath
+  floatperchapter=true,     % numbering per chapter for all floats (i.e., Figure 1.1)
+  minionprospacing=true,
+  eulermath=true,  % use awesome Euler fonts for mathematical formulae (only with pdfLaTeX)
+  beramono=true,    % toggle a nice monospaced font (w/ bold)
+  palatino=true,    % deactivate standard font for loading another one, see the last section at the end of this file for suggestions
+  style=arsclassica % classicthesis, arsclassica
+}{classicthesis}
+
+
 % ********************************************************************
 % Available options for classicthesis.sty 
 % (see ClassicThesis.pdf for more information):
@@ -39,6 +56,8 @@
 
 \usepackage{url}
 \usepackage{nameref}
+\usepackage{epigraph} %used for neat epigraphs at begging of chapters
+\usepackage{verse}
 \usepackage{datetime} %needed to add the date just below
 \usepackage{pdflscape} %used to rotate pages with wide tables
 \usepackage{rotating} %used to rotate wide figures
@@ -47,6 +66,8 @@
 % ****************************************************************************************************
 % 2. Personal data and user ad-hoc commands
 % ****************************************************************************************************
+
+\renewcommand{\epigraphsize}{\scriptsize}
 
 \def\authors{
   {Student No 1/Student ID 1},
@@ -106,6 +127,10 @@
 \usepackage{colortbl}
 % \usepackage{color}
 \definecolor{aublue}{HTML}{193b77} % the dark blue colour used by AU
+
+% Modify the biblabel format to use aublue for the source attribution
+\renewcommand{\mkcitation}[1]{\xspace\textcolor{aublue}{[#1]}}
+
 
 
 
@@ -176,26 +201,25 @@
 % ****************************************************************************************************
 % 5. Setup code listings
 % ****************************************************************************************************
-\usepackage{listings} 
+\usepackage{listings}
 %\lstset{emph={trueIndex,root},emphstyle=\color{BlueViolet}}%\underbar} % for special keywords
 \lstset{language=[LaTeX]Tex,%C++,
-    morekeywords={PassOptionsToPackage,selectlanguage},
-    keywordstyle=\color{RoyalBlue},%\bfseries,
-    basicstyle=\small\ttfamily,
-    identifierstyle=\color{NavyBlue},
-    commentstyle=\color{Green}\ttfamily,
-    stringstyle=\rmfamily,
+    keywordstyle=\bfseries,%\color{RoyalBlue},%\bfseries,
+    basicstyle=\footnotesize\ttfamily,
+    identifierstyle=\color{RoyalBlue},
+    commentstyle=\color{Green}\itshape,
+    stringstyle=\sffamily,
     numbers=left,
-    numberstyle=\tiny\color{Gray},
+    numberstyle=\tiny,
     stepnumber=1,
     numbersep=8pt,
     showstringspaces=false,
     breaklines=true,
-    %frameround=ftff,
-    %frame=single,
-    belowcaptionskip=.75\baselineskip
-    %frame=L
-} 
+    frameround=ffft,
+    belowcaptionskip=.75\baselineskip,
+    frame=single,
+    rulecolor=\color{aublue}
+}
 % ****************************************************************************************************             
 
 
